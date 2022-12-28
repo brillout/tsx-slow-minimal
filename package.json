@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "ts-node": "ts-node ./server/index.ts",
-    "tsx": "tsx --no-cache ./server/index.ts"
+    "start-ts-node": "ts-node ./server/index.ts",
+    "start-tsx": "tsx --no-cache ./server/index.ts"
   },
   "dependencies": {
     "@types/compression": "^1.7.2",
