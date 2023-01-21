@@ -1,27 +1,25 @@
 ```bash
-git clone git@github.com:brillout/tsx-slow
-cd tsx-slow/
+git clone git@github.com:brillout/tsx-slow-minimal
+cd tsx-slow-minimal/
 pnpm install
 ```
 
 Same as single line (copy-paste me):
 
 ```shell
-git clone git@github.com:brillout/tsx-slow && cd tsx-slow/ && pnpm install
+git clone git@github.com:brillout/tsx-slow-minimal && cd tsx-slow-minimal/ && pnpm install
 ```
 
-Run the server with `ts-node` and measure how long it takes for `Server running at http://localhost:3000` to show.
+Run `index.ts` with `ts-node` and measure how long it takes for `console.log(vite)` to show.
 
 ```bash
-pnpm exec ts-node server/index.ts
+pnpm exec ts-node index.ts
 ```
 
-Now run the server with `tsx` and measure how long it takes for `Server running at http://localhost:3000` to show.
+Now run `index.ts` with `tsx` and measure how long it takes for `console.log(vite)` to show.
 
 ```bash
-pnpm exec tsx --no-cache server/index.ts
+pnpm exec tsx --no-cache index.ts
 ```
 
-Observe that `tsx --no-cache` is much slower than `ts-node` (on my machine `tsx` is 4x slower).
-
-Even when using tsx's cache, `tsx` is still more than 2x slower than `ts-node`.
+Observe that `tsx` is much slower than `ts-node`.
